@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🛡️ Qaseem </title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Page Loading Animation -->
+    <div id="page-loader" class="page-loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <p class="loader-text">Loading Portfolio...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span>Caseem</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#awards">Awards</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="profile-image">
+                    <img src="profile.jpg" alt="Muhammad Qaseem">
+                </div>
+                <h1 class="hero-title" data-text="Muhammad Qaseem">Muhammad Qaseem</h1>
+                <h2 class="hero-subtitle" id="typewriter"></h2>
+                <p class="hero-description">Threat Hunter | DFIR Specialist | Deception Engineer</p>
+                <div class="hero-buttons">
+                    <a href="Muhammad_Qaseem_CV.pdf" class="btn btn-primary" target="_blank">
+                        <i class="fas fa-download"></i> Download CV
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+                <div class="hero-social">
+                    <a href="mailto:qaseem.infosec@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/muhammad-qaseem" class="social-link" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-bg">
+            <div class="grid-overlay"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a passionate cybersecurity engineer focused on detection engineering, DFIR, deception technologies, and security automation. I enjoy building scalable defense tools and improving SOC workflows through adversary emulation and open-source solutions.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">2+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Certifications</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">4</span>
+                            <span class="stat-label">Major Awards</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Security Engineer</h3>
+                        <h4>Cydea Tech</h4>
+                        <span class="timeline-date">Jul 2024 – Present</span>
+                        <p>Maintained DFIR IRIS, automated case management and threat intel pipelines. Built Attack Surface Monitoring and SOAR integrations (Shuffle, Velociraptor, etc).</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Hive Sentinel Developer</h3>
+                        <h4>Cydea Tech</h4>
+                        <span class="timeline-date">May 2023 – Jun 2024</span>
+                        <p>Developed deception-based honeypots, alert mapping with MITRE ATT&CK, simulations.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Intern — Product Analyst</h3>
+                        <h4>Various Organizations</h4>
+                        <span class="timeline-date">Jul 2022 – Sep 2022</span>
+                        <p>Evaluated honeypots (T-Pot, Cowrie), created MITRE-based detection rules.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Hive Sentinel: The Hacker Confine</h3>
+                    <p>Scalable deception framework with Gen2 honeypots, MITRE ATT&CK mapping, Elastic + Wazuh.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Elastic</span>
+                        <span class="tech-tag">Wazuh</span>
+                        <span class="tech-tag">MITRE ATT&CK</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Open Source SIEM Deployment</h3>
+                    <p>Centralized SIEM with Wazuh, custom dashboards, and adversary emulation.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Wazuh</span>
+                        <span class="tech-tag">Elasticsearch</span>
+                        <span class="tech-tag">Kibana</span>
+                        <span class="tech-tag">Docker</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Domains</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">DFIR</span>
+                        <span class="skill-item">Pen Testing</span>
+                        <span class="skill-item">SOC</span>
+                        <span class="skill-item">OSINT</span>
+                        <span class="skill-item">Detection Engineering</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">Wazuh</span>
+                        <span class="skill-item">Suricata</span>
+                        <span class="skill-item">Snort</span>
+                        <span class="skill-item">Elastic</span>
+                        <span class="skill-item">Shuffle</span>
+                        <span class="skill-item">Velociraptor</span>
+                        <span class="skill-item">DFIR-IRIS</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">Python</span>
+                        <span class="skill-item">Bash</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Interactive Skills Assessment -->
+            <div class="checkbox-group">
+                <h4>Areas of Expertise</h4>
+                <div class="checkbox-grid">
+                    <label class="custom-checkbox-container checkbox-security">
+                        <div class="custom-checkbox">
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                        </div>
+                        <span class="checkbox-label">Threat Detection & Analysis</span>
+                    </label>
+                    <label class="custom-checkbox-container checkbox-security">
+                        <div class="custom-checkbox">
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                        </div>
+                        <span class="checkbox-label">Incident Response</span>
+                    </label>
+                    <label class="custom-checkbox-container checkbox-security">
+                        <div class="custom-checkbox">
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                        </div>
+                        <span class="checkbox-label">Digital Forensics</span>
+                    </label>
+                    <label class="custom-checkbox-container checkbox-security">
+                        <div class="custom-checkbox">
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                        </div>
+                        <span class="checkbox-label">Vulnerability Assessment</span>
+                    </label>
+                    <label class="custom-checkbox-container">
+                        <div class="custom-checkbox">
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                        </div>
+                        <span class="checkbox-label">Security Operations</span>
+                    </label>
+                    <label class="custom-checkbox-container">
+                        <div class="custom-checkbox">
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                        </div>
+                        <span class="checkbox-label">Malware Analysis</span>
+                    </label>
+                    <label class="custom-checkbox-container">
+                        <div class="custom-checkbox">
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                        </div>
+                        <span class="checkbox-label">Network Security</span>
+                    </label>
+                    <label class="custom-checkbox-container">
+                        <div class="custom-checkbox">
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                        </div>
+                        <span class="checkbox-label">OSINT Investigations</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>CEH Master</h3>
+                    <p>EC-Council</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>CEH Practical</h3>
+                    <p>EC-Council</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>CEH</h3>
+                    <p>EC-Council</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>CAPT</h3>
+                    <p>Hackviser</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Malware Analysis</h3>
+                    <p>LetsDefend</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Incident Response</h3>
+                    <p>LetsDefend</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Detection Engineering</h3>
+                    <p>LetsDefend</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>HTB ProLabs</h3>
+                    <p>Dante, Zephyr, FullHouse</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section id="awards" class="awards">
+        <div class="container">
+            <h2 class="section-title">Awards & Recognition</h2>
+            <div class="awards-grid">
+                <div class="award-card">
+                    <div class="award-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>🛡️ Best Final Year Project</h3>
+                    <p>PAF-IAST FYP</p>
+                </div>
+                <div class="award-card">
+                    <div class="award-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>💰 FYP Funded</h3>
+                    <p>NGIRI Ignite</p>
+                </div>
+                <div class="award-card">
+                    <div class="award-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <h3>🔐 Challenge Solver</h3>
+                    <p>runZero Coin Challenge</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p>I'm always interested in discussing cybersecurity, new opportunities, and innovative security solutions.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:qaseem.infosec@gmail.com">qaseem.infosec@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <a href="https://linkedin.com/in/muhammad-qaseem" target="_blank">linkedin.com/in/muhammad-qaseem</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Punjab, Pakistan</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Muhammad Qaseem. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
