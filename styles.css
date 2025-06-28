@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    max-width: 100%;
 }
 
 html {
@@ -16,12 +17,46 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     transition: all 0.3s ease;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+/* Prevent horizontal scroll on all devices */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Improve touch interactions on mobile */
+@media (hover: none) and (pointer: coarse) {
+    .btn, .social-link, .project-card, .skill-item, .cert-card, .award-card {
+        transition: all 0.2s ease;
+    }
+    
+    /* Larger touch targets for mobile */
+    .nav-menu a {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .hamburger {
+        min-width: 44px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* Navigation */
@@ -54,6 +89,8 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 70px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .nav-logo span {
@@ -1381,5 +1418,496 @@ body {
     .grid-overlay {
         background-size: 25px 25px;
         opacity: 0.4;
+    }
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    /* Container adjustments */
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .nav-container {
+        padding: 0 1rem;
+    }
+    
+    /* Mobile Navigation */
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.98);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        backdrop-filter: blur(20px);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        height: calc(100vh - 70px);
+        overflow-y: auto;
+        padding: 2rem 0;
+        z-index: 999;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-menu li {
+        margin: 1.5rem 0;
+    }
+
+    .nav-menu a {
+        font-size: 1.2rem;
+        padding: 1rem;
+        display: block;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .hamburger {
+        display: flex;
+        z-index: 1001;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+    
+    /* Hero Section Mobile */
+    .hero {
+        height: 100vh;
+        padding: 100px 0 50px;
+    }
+    
+    .hero-container {
+        padding: 0 1rem;
+    }
+    
+    .profile-image {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto 1.5rem;
+    }
+    
+    .hero-title {
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+        padding: 0 1rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 0.8rem;
+        align-items: center;
+        margin-bottom: 1.5rem;
+    }
+    
+    .btn {
+        width: 200px;
+        justify-content: center;
+        padding: 0.8rem 1.5rem;
+    }
+    
+    .hero-social {
+        gap: 0.8rem;
+    }
+    
+    .social-link {
+        width: 45px;
+        height: 45px;
+    }
+    
+    /* Section adjustments */
+    section {
+        padding: 3rem 0;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    /* About Section Mobile */
+    .about-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .stat-label {
+        font-size: 0.8rem;
+    }
+    
+    /* Timeline Mobile */
+    .timeline::before {
+        left: 20px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        left: 0 !important;
+        padding-left: 60px !important;
+        padding-right: 0 !important;
+        margin-bottom: 2rem;
+    }
+    
+    .timeline-marker {
+        left: 12px !important;
+        right: auto !important;
+    }
+    
+    .timeline-content {
+        padding: 1rem;
+    }
+    
+    .timeline-content h3 {
+        font-size: 1.1rem;
+    }
+    
+    /* Projects Grid Mobile */
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .project-card {
+        padding: 1.5rem;
+    }
+    
+    .project-icon {
+        font-size: 2rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .project-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .project-tech {
+        gap: 0.3rem;
+    }
+    
+    .tech-tag {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.6rem;
+    }
+    
+    /* Skills Grid Mobile */
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .skill-category {
+        padding: 1.5rem;
+    }
+    
+    .skill-category h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .skill-items {
+        gap: 0.5rem;
+    }
+    
+    .skill-item {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    /* Certifications Grid Mobile */
+    .cert-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .cert-card {
+        padding: 1rem;
+    }
+    
+    .cert-icon {
+        font-size: 1.5rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .cert-card h3 {
+        font-size: 1rem;
+        margin-bottom: 0.3rem;
+    }
+    
+    .cert-card p {
+        font-size: 0.8rem;
+    }
+    
+    /* Awards Grid Mobile */
+    .awards-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .award-card {
+        padding: 1.5rem;
+    }
+    
+    .award-icon {
+        font-size: 2rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    /* Contact Section Mobile */
+    .contact-content {
+        text-align: center;
+    }
+    
+    .contact-info h3 {
+        font-size: 1.3rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .contact-info p {
+        margin-bottom: 1.5rem;
+        padding: 0 1rem;
+    }
+    
+    .contact-details {
+        gap: 0.8rem;
+    }
+    
+    .contact-item {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .contact-form {
+        margin-top: 2rem;
+        padding: 1.5rem;
+    }
+    
+    /* Form adjustments */
+    .form-group input,
+    .form-group textarea {
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Extra small mobile adjustments */
+    .nav-container {
+        padding: 0 0.5rem;
+    }
+    
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .hero-description {
+        font-size: 0.9rem;
+    }
+    
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .about-stats {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .timeline-item {
+        padding-left: 50px !important;
+    }
+    
+    .timeline-content {
+        padding: 0.8rem;
+    }
+    
+    .cert-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .social-link {
+        width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
+    }
+    
+    .btn {
+        width: 180px;
+        font-size: 0.9rem;
+    }
+    
+    /* Adjust hero buttons for very small screens */
+    .hero-buttons {
+        padding: 0 1rem;
+    }
+    
+    /* Better spacing for contact items */
+    .contact-item {
+        padding: 0.5rem;
+    }
+}
+
+/* Landscape orientation fixes */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        padding: 100px 0 30px;
+    }
+    
+    .profile-image {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-title {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .hero-description {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: row;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .btn {
+        width: auto;
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Additional mobile optimizations */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Ensure text doesn't overflow on small screens */
+h1, h2, h3, h4, h5, h6 {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+p, div, span {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Fix for any potential horizontal scroll */
+.hero-bg, .grid-overlay {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Improve mobile touch interactions */
+@media (max-width: 768px) {
+    /* Ensure all interactive elements have adequate touch targets */
+    button, .btn, a, .social-link {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    /* Better spacing for mobile readability */
+    p {
+        line-height: 1.7;
+    }
+    
+    /* Prevent text from being too close to screen edges */
+    .hero-content, .about-content, .contact-content {
+        padding: 0 1rem;
+    }
+    
+    /* Ensure cards don't get too narrow */
+    .project-card, .cert-card, .award-card, .skill-category {
+        min-width: 280px;
+        max-width: 100%;
+    }
+    
+    /* Better mobile typography */
+    body {
+        font-size: 16px; /* Prevents iOS zoom on form inputs */
+    }
+    
+    input, textarea, select {
+        font-size: 16px; /* Prevents iOS zoom */
+    }
+}
+
+/* Fix orientation change issues */
+@media screen and (orientation: portrait) {
+    .hero {
+        min-height: 100vh;
+    }
+}
+
+@media screen and (orientation: landscape) and (max-height: 600px) {
+    .hero {
+        min-height: 600px;
+        padding: 80px 0 20px;
+    }
+    
+    .profile-image {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
     }
 }
